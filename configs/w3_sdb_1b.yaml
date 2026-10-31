@@ -1,0 +1,17 @@
+﻿# SD-B: SB + token-embedding router + jointly trained draft readout.
+extends: w3_sb_1b.yaml
+name: w3_sdb_1b
+params: {reference: false, expected_non_embedding: null, match_config: w3_sb_1b.yaml, match_tolerance: 0.001}
+model:
+  memory:
+    router_input: embed2      # concat(RMSNorm(e[t-1]), RMSNorm(e[t])) instead of the hidden state
+    routes: auto              # solved at load so non-embedding params match SB within 0.1%
+  draft:
+    enabled: true
+    q_heads: 4                # 1 per memory KV head; head_dim must equal the readout's (64)
+    head_dim: 64
+    share_kv_proj: true       # reuse v2's memory norm + KV projection of the retrieved rows
+    detach_embeddings: true   # draft path cannot train embeddings / unembedding
+    loss_weight: 0.1          # lambda
+    loss_position_frac: 0.25  # draft KL on a random 25% of positions (seeded by step + window id)
+    loss_chunk: 512           # positions per draft-logits chunk

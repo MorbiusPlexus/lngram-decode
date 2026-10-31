@@ -1,0 +1,80 @@
+{
+ "SB": {
+  "open": {
+   "frac_tokens_copied_5gram": 0.59515625,
+   "frac_copied_from_prompt": 0.1010390625,
+   "frac_copied_from_own_continuation": 0.4941171875,
+   "by_position": {
+    "0-15": 0.09875,
+    "16-31": 0.2420625,
+    "32-63": 0.54971875,
+    "64-95": 0.78903125,
+    "96-127": 0.87146875
+   }
+  },
+  "long": {
+   "frac_tokens_copied_5gram": 0.6346875,
+   "frac_copied_from_prompt": 0.1443359375,
+   "frac_copied_from_own_continuation": 0.4903515625,
+   "by_position": {
+    "0-15": 0.1450625,
+    "16-31": 0.3094375,
+    "32-63": 0.6074375,
+    "64-95": 0.81359375,
+    "96-127": 0.89046875
+   }
+  }
+ },
+ "SD-B": {
+  "open": {
+   "frac_tokens_copied_5gram": 0.6170234375,
+   "frac_copied_from_prompt": 0.1171875,
+   "frac_copied_from_own_continuation": 0.4998359375,
+   "by_position": {
+    "0-15": 0.0986875,
+    "16-31": 0.2638125,
+    "32-63": 0.58196875,
+    "64-95": 0.808875,
+    "96-127": 0.896
+   }
+  },
+  "long": {
+   "frac_tokens_copied_5gram": 0.6532890625,
+   "frac_copied_from_prompt": 0.1617421875,
+   "frac_copied_from_own_continuation": 0.491546875,
+   "by_position": {
+    "0-15": 0.162,
+    "16-31": 0.32725,
+    "32-63": 0.61371875,
+    "64-95": 0.83740625,
+    "96-127": 0.91740625
+   }
+  }
+ },
+ "SD-C": {
+  "open": {
+   "frac_tokens_copied_5gram": 0.5860625,
+   "frac_copied_from_prompt": 0.10065625,
+   "frac_copied_from_own_continuation": 0.48540625,
+   "by_position": {
+    "0-15": 0.09425,
+    "16-31": 0.2335,
+    "32-63": 0.5365625,
+    "64-95": 0.77153125,
+    "96-127": 0.87228125
+   }
+  },
+  "long": {
+   "frac_tokens_copied_5gram": 0.629140625,
+   "frac_copied_from_prompt": 0.1452578125,
+   "frac_copied_from_own_continuation": 0.4838828125,
+   "by_position": {
+    "0-15": 0.141625,
+    "16-31": 0.3065,
+    "32-63": 0.595625,
+    "64-95": 0.80121875,
+    "96-127": 0.89565625
+   }
+  }
+ }
+}

@@ -1,0 +1,14 @@
+﻿# D270: dense, 24/4 attention, uniform d_ff (no cuts), ~ Run 2's active non-embedding params.
+extends: w1_dense_cut_near.yaml
+name: w3_dense270
+params: {reference: false, expected_non_embedding: null, match_reference: false}
+model:
+  d_ff: 2464
+  ffn_cut: null
+train:
+  tokens_total: 2000000000    # 3,815 steps
+  micro_batch: 2
+  zero1: true
+  save_steps: [1000, 2000, 3815]
+  strip_old_optimizer: true
+wandb: {project: morbius-wave3}

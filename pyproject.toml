@@ -1,0 +1,14 @@
+[project]
+name = "ffnmem"
+version = "0.1.0"
+description = "FFN reallocation with Lngram v2 memory: wave-1 training stack"
+requires-python = ">=3.10"
+
+[tool.setuptools.packages.find]
+include = ["ffnmem*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+  "slow: multi-process (torchrun) tests",
+]

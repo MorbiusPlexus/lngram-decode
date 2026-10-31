@@ -1,0 +1,63 @@
+{
+  "run": "sdc_fp32",
+  "ckpt": "~/morbius/runs/w3_sdc_1b/checkpoints/step_0001907.pt",
+  "bundle": "~/morbius/eval_bundle/sdc.bin",
+  "drafter": "cpp",
+  "threads": 1,
+  "dtype": "fp32",
+  "rows": "b0",
+  "target_codes": false,
+  "n_prompts": 100,
+  "prompt_len": 256,
+  "n_new": 128,
+  "torch": "2.11.0+cu126",
+  "device_name": "Tesla V100-PCIE-16GB",
+  "by_gamma": {
+    "2": {
+      "tokens_per_s": 21.552026770867734,
+      "greedy_tokens_per_s": 44.42981701664127,
+      "speedup": 0.4850802505622605,
+      "mean_accepted": 0.530743565300286,
+      "mean_tokens_per_block": 1.5307435653002859,
+      "blocks": 8392,
+      "branch_hit_rate": 0.15918958031837915,
+      "branch_counts": {
+        "main": 637,
+        "repair": 683,
+        "miss": 6972
+      },
+      "gpu_idle_fraction": 0.8594596041000457,
+      "draft_sync_s": 140.20413024164736,
+      "match_rate": 1.0,
+      "mismatches": 0,
+      "mismatches_near_tie": 0,
+      "all_mismatches_near_tie": true,
+      "verifier": "graph",
+      "verifier_error": null,
+      "mismatch_detail": []
+    },
+    "4": {
+      "tokens_per_s": 12.23844205802295,
+      "greedy_tokens_per_s": 44.42981701664127,
+      "speedup": 0.27545560346195025,
+      "mean_accepted": 0.6326142131979695,
+      "mean_tokens_per_block": 1.6326142131979695,
+      "blocks": 7880,
+      "branch_hit_rate": 0.09640102827763496,
+      "branch_counts": {
+        "main": 125,
+        "repair": 625,
+        "miss": 7030
+      },
+      "gpu_idle_fraction": 0.9206405805138145,
+      "draft_sync_s": 286.546575082466,
+      "match_rate": 1.0,
+      "mismatches": 0,
+      "mismatches_near_tie": 0,
+      "all_mismatches_near_tie": true,
+      "verifier": "graph",
+      "verifier_error": null,
+      "mismatch_detail": []
+    }
+  }
+}

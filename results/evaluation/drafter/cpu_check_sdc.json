@@ -1,0 +1,8 @@
+{
+  "bundle": "~/morbius/eval_bundle/sdc.bin",
+  "positions": 10000,
+  "code_mismatch_frac": 0.0,
+  "shortlist_equal": true,
+  "max_abs_logit_diff": 9.5367431640625e-06,
+  "argmax_agree": 1.0
+}

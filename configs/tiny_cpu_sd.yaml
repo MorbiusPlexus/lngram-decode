@@ -1,0 +1,7 @@
+# Tiny CPU self-drafting config (SD-C shape) for unit tests and the end-to-end test.
+extends: tiny_cpu.yaml
+name: tiny_cpu_sd
+model:
+  memory: {router_input: embed2_ssm}
+  ssm: {enabled: true, state_dim: 8, chunk: 8, feeds: [router, draft_query]}
+  draft: {enabled: true, q_heads: 2, head_dim: 16, loss_weight: 0.1, loss_position_frac: 0.25, loss_chunk: 5}

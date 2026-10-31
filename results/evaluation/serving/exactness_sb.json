@@ -1,0 +1,121 @@
+{
+  "run": "sb",
+  "ckpt": "~/morbius/runs/w3_sb_1b/checkpoints/step_0001907.pt",
+  "config": null,
+  "device": "cuda",
+  "prompts": 100,
+  "prompt_len": 64,
+  "tokens": 128,
+  "batch": 16,
+  "data_dir": "~/morbius/climbmix",
+  "torch": "2.11.0+cu126",
+  "results": {
+    "fp32": {
+      "b1": {
+        "sequences": 100,
+        "tokens_identical_frac": 1.0,
+        "max_abs_logit_diff": 0.0,
+        "first_divergence_steps": [],
+        "exact": true,
+        "serve_stats": {
+          "tokens": 19100,
+          "h2d_bytes": 3598745600,
+          "d2h_bytes": 8188000,
+          "pcie_bytes_per_token": 188844.69109947645,
+          "h2d_bytes_per_token": 188416.0,
+          "hits": 0,
+          "misses": 0,
+          "hit_rate": 0.0,
+          "exact_gathers": 896,
+          "stale": 0,
+          "host_wait_ms_total": 0.0,
+          "gather_ms_total": 235.13103276491165,
+          "gpu_wait_ms_total": 0.0,
+          "gpu_wait_ms_median": null,
+          "gpu_wait_ms_p99": null,
+          "gpu_waits": 0
+        }
+      },
+      "b4": {
+        "sequences": 100,
+        "tokens_identical_frac": 1.0,
+        "max_abs_logit_diff": 0.0,
+        "first_divergence_steps": [],
+        "exact": true,
+        "serve_stats": {
+          "tokens": 19100,
+          "h2d_bytes": 39793459200,
+          "d2h_bytes": 8243200,
+          "pcie_bytes_per_token": 2083858.7643979057,
+          "h2d_bytes_per_token": 2083427.1832460733,
+          "hits": 889,
+          "misses": 0,
+          "hit_rate": 1.0,
+          "exact_gathers": 7,
+          "stale": 0,
+          "host_wait_ms_total": 2.7550384402275085,
+          "gather_ms_total": 1624.6057394891977,
+          "gpu_wait_ms_total": 7.054432047531009,
+          "gpu_wait_ms_median": 0.008191999979317188,
+          "gpu_wait_ms_p99": 0.013311999849975109,
+          "gpu_waits": 889
+        }
+      },
+      "seconds": 62.14299176633358
+    },
+    "fp16": {
+      "b1": {
+        "sequences": 100,
+        "tokens_identical_frac": 1.0,
+        "max_abs_logit_diff": 0.0,
+        "first_divergence_steps": [],
+        "exact": true,
+        "serve_stats": {
+          "tokens": 19100,
+          "h2d_bytes": 1799372800,
+          "d2h_bytes": 8188000,
+          "pcie_bytes_per_token": 94636.69109947643,
+          "h2d_bytes_per_token": 94208.0,
+          "hits": 0,
+          "misses": 0,
+          "hit_rate": 0.0,
+          "exact_gathers": 896,
+          "stale": 0,
+          "host_wait_ms_total": 0.0,
+          "gather_ms_total": 164.49563577771187,
+          "gpu_wait_ms_total": 0.0,
+          "gpu_wait_ms_median": null,
+          "gpu_wait_ms_p99": null,
+          "gpu_waits": 0
+        }
+      },
+      "b4": {
+        "sequences": 100,
+        "tokens_identical_frac": 1.0,
+        "max_abs_logit_diff": 0.0,
+        "first_divergence_steps": [],
+        "exact": true,
+        "serve_stats": {
+          "tokens": 19100,
+          "h2d_bytes": 19896729600,
+          "d2h_bytes": 8243200,
+          "pcie_bytes_per_token": 1042145.1727748691,
+          "h2d_bytes_per_token": 1041713.5916230367,
+          "hits": 889,
+          "misses": 0,
+          "hit_rate": 1.0,
+          "exact_gathers": 7,
+          "stale": 0,
+          "host_wait_ms_total": 2.777380868792534,
+          "gather_ms_total": 874.3882719427347,
+          "gpu_wait_ms_total": 7.114784037694335,
+          "gpu_wait_ms_median": 0.008191999979317188,
+          "gpu_wait_ms_p99": 0.01228800043463707,
+          "gpu_waits": 889
+        }
+      },
+      "seconds": 69.09494025819004
+    }
+  },
+  "pass": true
+}

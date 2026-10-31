@@ -1,0 +1,19 @@
+﻿# SD-A: SB with the hidden-state router kept + an imitating token router whose codes
+# the draft path uses (BCE weight mu against the main router's bits).
+extends: w3_sb_1b.yaml
+name: w3_sda_1b
+params: {reference: false, expected_non_embedding: null, match_config: w3_sb_1b.yaml, match_tolerance: 0.001}
+model:
+  memory:
+    router_input: hidden
+    token_router: {enabled: true, loss_weight: 0.1}   # mu
+    routes: auto
+  draft:
+    enabled: true
+    q_heads: 4
+    head_dim: 64
+    share_kv_proj: true
+    detach_embeddings: true
+    loss_weight: 0.1
+    loss_position_frac: 0.25
+    loss_chunk: 512

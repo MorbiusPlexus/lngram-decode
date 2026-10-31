@@ -1,0 +1,31 @@
+{
+  "counts": {
+    "embedding": 33554432,
+    "attention": 88080384,
+    "ffn": 176160768,
+    "norms": 50176,
+    "memory_tables": 102498304,
+    "memory_readout": 2988288,
+    "draft": 0,
+    "ssm": 0,
+    "total": 403332352,
+    "non_embedding": 369777920,
+    "active_non_embedding_per_token": 267326720
+  },
+  "breakdown": {
+    "embedding": 33554432,
+    "attention": 88080384,
+    "ffn": 176160768,
+    "norms": 50176,
+    "memory_tables": 102498304,
+    "memory_readout": 2234624,
+    "router": 753664,
+    "draft": 0,
+    "ssm": 0,
+    "non_embedding": 369777920
+  },
+  "routes": [
+    184
+  ],
+  "match_target": null
+}

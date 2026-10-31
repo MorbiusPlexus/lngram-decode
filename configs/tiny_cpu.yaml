@@ -1,0 +1,30 @@
+# Tiny CPU config for unit tests and the end-to-end test (not a real run).
+extends: base.yaml
+name: tiny_cpu
+params: {match_reference: false}
+model:
+  d_model: 64
+  n_layers: 4
+  n_heads: 4
+  n_kv_heads: 2
+  head_dim: 16
+  vocab: 256
+  seq_len: 32
+  d_ff: 128
+  memory_layers: [1]
+  memory: {routes: 4, mem_dim: 16, kv_heads: 2, q_heads: 4, head_dim: 16, execution_mode: full}
+train:
+  data_dir: runs/_tiny_data
+  val_tokens: 2048
+  global_batch: 8
+  micro_batch: 2
+  tokens_total: 5120        # 20 steps
+  warmup_min_steps: 2
+  precision: fp32
+  act_ckpt: false
+  ckpt_every: 10
+  eval_every: 10
+  keep_last: 3
+  keep_every: 1000
+  log_every: 1
+  diag_batches: 2

@@ -1,0 +1,63 @@
+{
+  "bundle": "~/morbius/eval_bundle/sdc.bin",
+  "config": {
+    "bits": 4,
+    "d_model": 1024,
+    "draft_eps": 1e-05,
+    "groups": 1,
+    "head_dim": 64,
+    "kind": "sd_c",
+    "kv_heads": 4,
+    "layer": 1,
+    "mem_dim": 128,
+    "mem_eps": 1e-05,
+    "ngrams": [
+      2,
+      3
+    ],
+    "norm_eps": 1e-05,
+    "q_heads": 4,
+    "query_ssm": true,
+    "route_token_dim": 256,
+    "router_eps": 1e-05,
+    "router_kind": "embed2_ssm",
+    "routes": 181,
+    "shortlist_cap": 64,
+    "sink_logit": 5.198497031265826,
+    "sketch_k": 16,
+    "softmax_scale": 0.125,
+    "ssm_dim": 256,
+    "ssm_eps": 1e-05,
+    "table_dtype": "fp16",
+    "vocab": 32768
+  },
+  "runs": [
+    {
+      "impl": "cpp",
+      "threads": 1,
+      "gamma": 4,
+      "iters": 500,
+      "us_per_token_median": 10312.791913747787,
+      "us_per_token_p99": 10838.810140267013,
+      "us_per_token_mean": 10327.92095374316
+    },
+    {
+      "impl": "cpp",
+      "threads": 2,
+      "gamma": 4,
+      "iters": 500,
+      "us_per_token_median": 5743.077490478754,
+      "us_per_token_p99": 6112.385927699505,
+      "us_per_token_mean": 5774.732374586165
+    },
+    {
+      "impl": "cpp",
+      "threads": 4,
+      "gamma": 4,
+      "iters": 500,
+      "us_per_token_median": 3603.148739784956,
+      "us_per_token_p99": 3877.6699267327763,
+      "us_per_token_mean": 3627.4901246652007
+    }
+  ]
+}

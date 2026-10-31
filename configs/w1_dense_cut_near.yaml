@@ -1,0 +1,7 @@
+# Run 5: dense, same cut (delta 1280 in 2-5, 12-15) and same attention widening.
+extends: w1_dense_full.yaml
+name: w1_dense_cut_near
+model:
+  n_heads: 24
+  n_kv_heads: 4
+  ffn_cut: {layers: [2, 3, 4, 5, 12, 13, 14, 15], delta: 1280}

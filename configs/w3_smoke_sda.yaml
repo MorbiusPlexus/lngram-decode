@@ -1,0 +1,10 @@
+﻿# Smoke run for w3_sda_1b: the target's own schedule, stopped after 95 steps (~0.05B tokens),
+# so its loss at step 90 is directly comparable with SB's log (gate G0).
+extends: w3_sda_1b.yaml
+name: w3_smoke_sda
+train:
+  max_steps: 95
+  save_steps: []
+  ckpt_every: 95
+  eval_every: 95
+  eval_max_batches: 50

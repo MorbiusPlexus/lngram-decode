@@ -1,0 +1,13 @@
+# SB: super-memory baseline at 1B tokens.
+# Same model as w2_mem_super1: memory at layer 1 only, R = 184, 24/4 attention.
+extends: w2_mem_super1.yaml
+name: w3_sb_1b
+params: {reference: true}
+train:
+  tokens_total: 999817216     # exactly 1,907 steps of 524,288 tokens (1e9 would round up to 1,908)
+  warmup_frac: 0.02           # warmup_min_steps stays 100 (base.yaml), so warmup = 100 steps as in Wave 1
+  micro_batch: 2
+  zero1: true
+  save_steps: [500, 1000, 1907]
+  strip_old_optimizer: true
+wandb: {project: morbius-wave3}

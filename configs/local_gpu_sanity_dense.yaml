@@ -1,0 +1,6 @@
+# No-memory counterpart of local_gpu_sanity (run 100 steps: --max_steps 100).
+extends: local_gpu_sanity.yaml
+name: local_gpu_sanity_dense
+model:
+  memory_layers: []
+  memory: null

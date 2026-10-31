@@ -1,0 +1,5 @@
+# Run 3: location control -- same cut 4 layers later.
+extends: w1_mem_cut_near.yaml
+name: w1_mem_cut_far
+model:
+  ffn_cut: {layers: [6, 7, 8, 9, 16, 17, 18, 19], delta: 1280}

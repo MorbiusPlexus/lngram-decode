@@ -1,0 +1,9 @@
+# Run 2: memory; d_ff 2816 -> 1536 in the 4 layers after each insertion;
+# freed 31.5M -> attention widened in all layers (24 q heads, 4 kv heads).
+extends: w1_mem_full.yaml
+name: w1_mem_cut_near
+params: {reference: false, expected_non_embedding: 369767936}
+model:
+  n_heads: 24
+  n_kv_heads: 4
+  ffn_cut: {layers: [2, 3, 4, 5, 12, 13, 14, 15], delta: 1280}

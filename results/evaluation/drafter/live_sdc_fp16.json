@@ -1,0 +1,205 @@
+{
+  "run": "sdc_fp16",
+  "ckpt": "~/morbius/runs/w3_sdc_1b/checkpoints/step_0001907.pt",
+  "bundle": "~/morbius/eval_bundle/sdc.bin",
+  "drafter": "cpp",
+  "threads": 1,
+  "dtype": "fp16",
+  "rows": "b0",
+  "target_codes": false,
+  "n_prompts": 100,
+  "prompt_len": 256,
+  "n_new": 128,
+  "torch": "2.11.0+cu126",
+  "device_name": "Tesla V100-PCIE-16GB",
+  "by_gamma": {
+    "2": {
+      "tokens_per_s": 21.870320545396808,
+      "greedy_tokens_per_s": 37.44939571170725,
+      "speedup": 0.583996620766829,
+      "mean_accepted": 0.5312909762784599,
+      "mean_tokens_per_block": 1.53129097627846,
+      "blocks": 8389,
+      "branch_hit_rate": 0.15924719507781396,
+      "branch_counts": {
+        "main": 637,
+        "repair": 683,
+        "miss": 6969
+      },
+      "gpu_idle_fraction": 0.8231716092989876,
+      "draft_sync_s": 139.28481558151543,
+      "match_rate": 0.89,
+      "mismatches": 11,
+      "mismatches_near_tie": 11,
+      "all_mismatches_near_tie": true,
+      "verifier": "graph",
+      "verifier_error": null,
+      "mismatch_detail": [
+        {
+          "match": false,
+          "first_mismatch": 6,
+          "margin": 0.0,
+          "near_tie": true,
+          "prompt": 2
+        },
+        {
+          "match": false,
+          "first_mismatch": 48,
+          "margin": 0.0078125,
+          "near_tie": true,
+          "prompt": 20
+        },
+        {
+          "match": false,
+          "first_mismatch": 107,
+          "margin": 0.0078125,
+          "near_tie": true,
+          "prompt": 29
+        },
+        {
+          "match": false,
+          "first_mismatch": 124,
+          "margin": 0.0,
+          "near_tie": true,
+          "prompt": 32
+        },
+        {
+          "match": false,
+          "first_mismatch": 50,
+          "margin": 0.0078125,
+          "near_tie": true,
+          "prompt": 49
+        },
+        {
+          "match": false,
+          "first_mismatch": 5,
+          "margin": 0.0,
+          "near_tie": true,
+          "prompt": 52
+        },
+        {
+          "match": false,
+          "first_mismatch": 26,
+          "margin": 0.0,
+          "near_tie": true,
+          "prompt": 63
+        },
+        {
+          "match": false,
+          "first_mismatch": 35,
+          "margin": 0.0,
+          "near_tie": true,
+          "prompt": 68
+        },
+        {
+          "match": false,
+          "first_mismatch": 16,
+          "margin": 0.0078125,
+          "near_tie": true,
+          "prompt": 78
+        },
+        {
+          "match": false,
+          "first_mismatch": 44,
+          "margin": 0.0,
+          "near_tie": true,
+          "prompt": 79
+        },
+        {
+          "match": false,
+          "first_mismatch": 0,
+          "margin": 0.0,
+          "near_tie": true,
+          "prompt": 89
+        }
+      ]
+    },
+    "4": {
+      "tokens_per_s": 12.389135734228603,
+      "greedy_tokens_per_s": 37.44939571170725,
+      "speedup": 0.33082338176035164,
+      "mean_accepted": 0.6336507936507937,
+      "mean_tokens_per_block": 1.6336507936507938,
+      "blocks": 7875,
+      "branch_hit_rate": 0.09659163987138264,
+      "branch_counts": {
+        "main": 125,
+        "repair": 626,
+        "miss": 7024
+      },
+      "gpu_idle_fraction": 0.9044270483583204,
+      "draft_sync_s": 284.26469923742115,
+      "match_rate": 0.91,
+      "mismatches": 9,
+      "mismatches_near_tie": 9,
+      "all_mismatches_near_tie": true,
+      "verifier": "graph",
+      "verifier_error": null,
+      "mismatch_detail": [
+        {
+          "match": false,
+          "first_mismatch": 6,
+          "margin": 0.0,
+          "near_tie": true,
+          "prompt": 2
+        },
+        {
+          "match": false,
+          "first_mismatch": 107,
+          "margin": 0.0078125,
+          "near_tie": true,
+          "prompt": 29
+        },
+        {
+          "match": false,
+          "first_mismatch": 124,
+          "margin": 0.0,
+          "near_tie": true,
+          "prompt": 32
+        },
+        {
+          "match": false,
+          "first_mismatch": 5,
+          "margin": 0.0,
+          "near_tie": true,
+          "prompt": 52
+        },
+        {
+          "match": false,
+          "first_mismatch": 26,
+          "margin": 0.0,
+          "near_tie": true,
+          "prompt": 63
+        },
+        {
+          "match": false,
+          "first_mismatch": 35,
+          "margin": 0.0,
+          "near_tie": true,
+          "prompt": 68
+        },
+        {
+          "match": false,
+          "first_mismatch": 16,
+          "margin": 0.0078125,
+          "near_tie": true,
+          "prompt": 78
+        },
+        {
+          "match": false,
+          "first_mismatch": 44,
+          "margin": 0.0,
+          "near_tie": true,
+          "prompt": 79
+        },
+        {
+          "match": false,
+          "first_mismatch": 0,
+          "margin": 0.0,
+          "near_tie": true,
+          "prompt": 89
+        }
+      ]
+    }
+  }
+}

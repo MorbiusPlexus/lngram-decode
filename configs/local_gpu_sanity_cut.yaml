@@ -1,0 +1,7 @@
+# Run-2 code path at sanity scale: widened attention (24 q / 4 kv heads), d_ff cut in 2-3.
+extends: local_gpu_sanity.yaml
+name: local_gpu_sanity_cut
+model:
+  n_heads: 24
+  n_kv_heads: 4
+  ffn_cut: {layers: [2, 3], delta: 1280}

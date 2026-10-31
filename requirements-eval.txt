@@ -1,0 +1,10 @@
+# Eval / analysis env (eval/, analysis/plot_figures.py, analysis/* plots). Install into a SEPARATE env from training:
+# lm-eval pulls datasets/tokenizers versions newer than requirements.txt pins.
+#   pip install torch==2.11.0 --index-url https://download.pytorch.org/whl/cu126
+#   pip install -r requirements-eval.txt
+numpy
+PyYAML
+pytest
+lm-eval==0.4.13             # eval/lm_eval_adapter.py (task mmlu_continuation = cloze MMLU)
+tokenizers
+matplotlib==3.11.2

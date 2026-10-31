@@ -1,0 +1,14 @@
+{
+ "code_agreement_mean": 0.368074611497962,
+ "code_agreement_min": 0.19224869791666666,
+ "code_agreement_max": 0.5254635416666666,
+ "bit_agreement": [
+  0.7674755611696105,
+  0.7686476732336956,
+  0.7688907453011775,
+  0.7622942814481432
+ ],
+ "nmi_same_route_mean": 0.3165679499598391,
+ "chance_agreement": 0.0625,
+ "all_routes_identical_frac_positions": 0.0
+}

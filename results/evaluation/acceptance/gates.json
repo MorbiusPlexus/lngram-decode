@@ -1,0 +1,210 @@
+{
+ "files": [
+  "results/acceptance_w3_sb_1b.json",
+  "results/acceptance_w3_sdb_1b.json",
+  "results/acceptance_w3_sdc_1b.json"
+ ],
+ "ssm_gate": {
+  "status": "pass",
+  "relative_gain": 0.32257930748496766,
+  "ci95": [
+   0.29423639932562573,
+   0.3521138554579701
+  ],
+  "min_gain": 0.05,
+  "mean_with_ssm": 0.510304,
+  "mean_without_ssm": 0.38584,
+  "text_type": "long",
+  "gamma": 4,
+  "target": "w3_sb_1b",
+  "decision": "run SD-C"
+ },
+ "live_gate": {
+  "status": "pass",
+  "comparisons": [
+   {
+    "target": "w3_sb_1b",
+    "drafter": "posthoc",
+    "text_type": "open",
+    "gamma": 4,
+    "diff": -0.41770399999999996,
+    "ci95": [
+     -0.4419602,
+     -0.3937879999999999
+    ],
+    "beats": false,
+    "mean": 0.42135200000000006,
+    "baseline_mean": 0.839056
+   },
+   {
+    "target": "w3_sb_1b",
+    "drafter": "posthoc",
+    "text_type": "long",
+    "gamma": 4,
+    "diff": -0.36701599999999995,
+    "ci95": [
+     -0.38988119999999993,
+     -0.3465602000000001
+    ],
+    "beats": false,
+    "mean": 0.38584,
+    "baseline_mean": 0.752856
+   },
+   {
+    "target": "w3_sb_1b",
+    "drafter": "posthoc_ssm",
+    "text_type": "open",
+    "gamma": 4,
+    "diff": -0.289968,
+    "ci95": [
+     -0.3132715999999999,
+     -0.2653412
+    ],
+    "beats": false,
+    "mean": 0.549088,
+    "baseline_mean": 0.839056
+   },
+   {
+    "target": "w3_sb_1b",
+    "drafter": "posthoc_ssm",
+    "text_type": "long",
+    "gamma": 4,
+    "diff": -0.242552,
+    "ci95": [
+     -0.2652027999999998,
+     -0.21900379999999997
+    ],
+    "beats": false,
+    "mean": 0.510304,
+    "baseline_mean": 0.752856
+   },
+   {
+    "target": "w3_sdb_1b",
+    "drafter": "sdhead",
+    "text_type": "open",
+    "gamma": 4,
+    "diff": -0.05572800000000011,
+    "ci95": [
+     -0.07314979999999999,
+     -0.03848459999999986
+    ],
+    "beats": false,
+    "mean": 0.8125999999999999,
+    "baseline_mean": 0.868328
+   },
+   {
+    "target": "w3_sdb_1b",
+    "drafter": "sdhead",
+    "text_type": "long",
+    "gamma": 4,
+    "diff": -0.044248000000000065,
+    "ci95": [
+     -0.063057,
+     -0.024106400000000024
+    ],
+    "beats": false,
+    "mean": 0.7329439999999999,
+    "baseline_mean": 0.777192
+   },
+   {
+    "target": "w3_sdb_1b",
+    "drafter": "sdhead_online",
+    "text_type": "open",
+    "gamma": 4,
+    "diff": 1.722944,
+    "ci95": [
+     1.6667806000000003,
+     1.7757133999999999
+    ],
+    "beats": true,
+    "mean": 2.591272,
+    "baseline_mean": 0.868328
+   },
+   {
+    "target": "w3_sdb_1b",
+    "drafter": "sdhead_online",
+    "text_type": "long",
+    "gamma": 4,
+    "diff": 1.6824080000000006,
+    "ci95": [
+     1.6285540000000003,
+     1.7362262
+    ],
+    "beats": true,
+    "mean": 2.4596000000000005,
+    "baseline_mean": 0.777192
+   },
+   {
+    "target": "w3_sdc_1b",
+    "drafter": "sdhead",
+    "text_type": "open",
+    "gamma": 4,
+    "diff": 0.17714399999999997,
+    "ci95": [
+     0.15619479999999988,
+     0.19670699999999988
+    ],
+    "beats": true,
+    "mean": 1.035976,
+    "baseline_mean": 0.858832
+   },
+   {
+    "target": "w3_sdc_1b",
+    "drafter": "sdhead",
+    "text_type": "long",
+    "gamma": 4,
+    "diff": 0.17249599999999987,
+    "ci95": [
+     0.15170240000000007,
+     0.1931867999999999
+    ],
+    "beats": true,
+    "mean": 0.9385039999999999,
+    "baseline_mean": 0.766008
+   },
+   {
+    "target": "w3_sdc_1b",
+    "drafter": "sdhead_online",
+    "text_type": "open",
+    "gamma": 4,
+    "diff": 1.6652239999999998,
+    "ci95": [
+     1.6155560000000004,
+     1.7193756
+    ],
+    "beats": true,
+    "mean": 2.524056,
+    "baseline_mean": 0.858832
+   },
+   {
+    "target": "w3_sdc_1b",
+    "drafter": "sdhead_online",
+    "text_type": "long",
+    "gamma": 4,
+    "diff": 1.427112,
+    "ci95": [
+     1.3609022000000002,
+     1.4887414000000003
+    ],
+    "beats": true,
+    "mean": 2.19312,
+    "baseline_mean": 0.766008
+   }
+  ],
+  "best": {
+   "target": "w3_sdb_1b",
+   "drafter": "sdhead_online",
+   "text_type": "open",
+   "gamma": 4,
+   "diff": 1.722944,
+   "ci95": [
+    1.6667806000000003,
+    1.7757133999999999
+   ],
+   "beats": true,
+   "mean": 2.591272,
+   "baseline_mean": 0.868328
+  },
+  "decision": "build the live pipeline for the best drafter"
+ }
+}

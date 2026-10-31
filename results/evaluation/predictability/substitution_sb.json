@@ -1,0 +1,79 @@
+{
+ "modes": {
+  "baseline": {
+   "loss": {
+    "value": 2.734701475938161,
+    "lo": 2.6995439515829087,
+    "hi": 2.771139300684134
+   }
+  },
+  "own": {
+   "loss": {
+    "value": 2.734701475938161,
+    "lo": 2.6995439515829087,
+    "hi": 2.771139300684134
+   },
+   "delta_vs_baseline": {
+    "value": 0.0,
+    "lo": 0.0,
+    "hi": 0.0
+   },
+   "max_abs_window_diff": 0.0
+  },
+  "mlp": {
+   "loss": {
+    "value": 2.735322131315867,
+    "lo": 2.700126082479954,
+    "hi": 2.7718547981381416
+   },
+   "delta_vs_baseline": {
+    "value": 0.000620655377705892,
+    "lo": 0.00044934382836023967,
+    "hi": 0.0007752843578656515
+   },
+   "max_abs_window_diff": 0.01723766326904297
+  },
+  "random": {
+   "loss": {
+    "value": 3.050000051498413,
+    "lo": 3.0170479974071185,
+    "hi": 3.0844895465175313
+   },
+   "delta_vs_baseline": {
+    "value": 0.31529857556025187,
+    "lo": 0.31111779821713764,
+    "hi": 0.31966946306626004
+   },
+   "max_abs_window_diff": 0.5185654163360596
+  },
+  "zero": {
+   "loss": {
+    "value": 3.018017208894094,
+    "lo": 2.984566320904096,
+    "hi": 3.0528392621835074
+   },
+   "delta_vs_baseline": {
+    "value": 0.2833157329559326,
+    "lo": 0.27962797901630404,
+    "hi": 0.2871846375544866
+   },
+   "max_abs_window_diff": 0.458970308303833
+  }
+ },
+ "n_windows": 750,
+ "n_tokens": 1536000,
+ "layers": [
+  1
+ ],
+ "precision": "fp16",
+ "ci": "95% paired percentile bootstrap over val windows",
+ "mlp_code_accuracy": {
+  "1": 0.888956493432971
+ },
+ "run": "sb",
+ "checkpoint": "checkpoints/w3_sb_1b\\checkpoints\\step_0001907.pt",
+ "step": 1907,
+ "mlp_files": [
+  "results/rq2_sb_mlp_L1.pt"
+ ]
+}

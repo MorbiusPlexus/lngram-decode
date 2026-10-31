@@ -1,0 +1,12 @@
+# Wave 2, idea A: per-entry rank-1 readout added to Lngram v2 at memory layer 1,
+# paid for by halving layer 11's table (probe: layer 11 worth +0.02 nats vs layer 1 +0.21).
+#   layer 1 : v2 unchanged (R=90, dm=128) + rank-1 tables (w,u in R^32 per row, same addresses)
+#   layer 11: v2 with dm=64 (half the table)
+# Iso-param with run 1 (w1_mem_full): total tables 100.3M either way.
+extends: w1_mem_full.yaml
+name: w2_mem_rank1
+params: {reference: false, expected_non_embedding: 369767808}
+model:
+  memory_overrides:
+    1: {rank1: {dim: 32}}
+    11: {mem_dim: 64}

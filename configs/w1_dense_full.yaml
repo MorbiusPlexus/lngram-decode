@@ -1,0 +1,7 @@
+# Run 4: iso-parameter dense baseline (no memory); d_ff widened everywhere to
+# match run 1's non-embedding total (value from `python -m ffnmem.params --solve`).
+extends: base.yaml
+name: w1_dense_full
+model:
+  d_ff: 4256
+params: {expected_non_embedding: 370459648}

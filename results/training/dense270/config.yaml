@@ -1,0 +1,114 @@
+model:
+  d_model: 1024
+  n_layers: 24
+  n_heads: 24
+  n_kv_heads: 4
+  head_dim: 64
+  vocab: 32768
+  seq_len: 2048
+  d_ff:
+  - 2464
+  - 2464
+  - 2464
+  - 2464
+  - 2464
+  - 2464
+  - 2464
+  - 2464
+  - 2464
+  - 2464
+  - 2464
+  - 2464
+  - 2464
+  - 2464
+  - 2464
+  - 2464
+  - 2464
+  - 2464
+  - 2464
+  - 2464
+  - 2464
+  - 2464
+  - 2464
+  - 2464
+  memory_layers: []
+  memory: null
+  norm_eps: 1.0e-05
+  rope_theta: 10000.0
+  init_std: 0.02
+  layers:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  - 13
+  - 14
+  - 15
+  - 16
+  - 17
+  - 18
+  - 19
+  - 20
+  - 21
+  - 22
+  - 23
+  memory_overrides: {}
+  draft: null
+  ssm: null
+train:
+  seed: 1234
+  data_seed: 1234
+  data_dir: ~/morbius/climbmix
+  val_tokens: 20000000
+  global_batch: 256
+  micro_batch: 2
+  tokens_total: 2000000000
+  lr: 0.0006
+  min_lr_ratio: 0.1
+  warmup_frac: 0.02
+  warmup_min_steps: 100
+  betas:
+  - 0.9
+  - 0.95
+  eps: 1.0e-08
+  weight_decay: 0.1
+  grad_clip: 1.0
+  table_lr_mult: 4.0
+  precision: fp16
+  act_ckpt: true
+  attn_backend: sdpa
+  zero1: true
+  ckpt_every: 200
+  keep_last: 3
+  keep_every: 1000
+  eval_every: 200
+  eval_max_batches: null
+  diag_batches: 4
+  log_every: 10
+  scaler_min: 1.0
+  scaler_patience: 100
+  nan_patience: 20
+  out_root: runs
+  save_steps:
+  - 1000
+  - 2000
+  - 3815
+  strip_old_optimizer: true
+  seq_len: 2048
+name: w3_dense270
+params:
+  expected_non_embedding: null
+  reference: false
+  match_reference: false
+wandb:
+  project: morbius-wave3
+_source: ~/morbius/configs/w3_dense270.yaml

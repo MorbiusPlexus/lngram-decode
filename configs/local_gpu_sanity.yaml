@@ -1,0 +1,21 @@
+# Local GPU sanity run (GTX 1650 Super, 4 GB, sm75): config-S width, 6 layers,
+# memory at 1 and 4 with R=16, seq 1024. Exercises fp16 + kernels, not speed.
+extends: base.yaml
+name: local_gpu_sanity
+params: {match_reference: false}
+model:
+  n_layers: 6
+  seq_len: 1024
+  memory_layers: [1, 4]
+  memory: {routes: 16, mem_dim: 128, kv_heads: 4, q_heads: 16, head_dim: 64, execution_mode: full}
+train:
+  val_tokens: 1000000
+  global_batch: 8
+  micro_batch: 1
+  tokens_total: 2457600     # 300 steps x 8 x 1024
+  warmup_frac: 0.1
+  warmup_min_steps: 10
+  ckpt_every: 100
+  eval_every: 100
+  eval_max_batches: 50
+  log_every: 10

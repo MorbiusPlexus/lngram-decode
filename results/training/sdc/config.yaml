@@ -1,0 +1,148 @@
+model:
+  d_model: 1024
+  n_layers: 24
+  n_heads: 24
+  n_kv_heads: 4
+  head_dim: 64
+  vocab: 32768
+  seq_len: 2048
+  d_ff:
+  - 2816
+  - 2816
+  - 1536
+  - 1536
+  - 1536
+  - 1536
+  - 2816
+  - 2816
+  - 2816
+  - 2816
+  - 2816
+  - 2816
+  - 1536
+  - 1536
+  - 1536
+  - 1536
+  - 2816
+  - 2816
+  - 2816
+  - 2816
+  - 2816
+  - 2816
+  - 2816
+  - 2816
+  memory_layers:
+  - 1
+  memory:
+    routes: 181
+    mem_dim: 128
+    kv_heads: 4
+    q_heads: 16
+    head_dim: 64
+    execution_mode: full
+    router_input: embed2_ssm
+  norm_eps: 1.0e-05
+  rope_theta: 10000.0
+  init_std: 0.02
+  draft:
+    enabled: true
+    q_heads: 4
+    head_dim: 64
+    share_kv_proj: true
+    detach_embeddings: true
+    loss_weight: 0.1
+    loss_position_frac: 0.25
+    loss_chunk: 512
+  ssm:
+    enabled: true
+    state_dim: 256
+    chunk: 128
+    feeds:
+    - router
+    - draft_query
+  ffn_cut_layers:
+  - 2
+  - 3
+  - 4
+  - 5
+  - 12
+  - 13
+  - 14
+  - 15
+  ffn_cut_delta: 1280
+  layers:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  - 13
+  - 14
+  - 15
+  - 16
+  - 17
+  - 18
+  - 19
+  - 20
+  - 21
+  - 22
+  - 23
+  memory_overrides: {}
+train:
+  seed: 1234
+  data_seed: 1234
+  data_dir: ~/morbius/climbmix
+  val_tokens: 20000000
+  global_batch: 256
+  micro_batch: 2
+  tokens_total: 999817216
+  lr: 0.0006
+  min_lr_ratio: 0.1
+  warmup_frac: 0.02
+  warmup_min_steps: 100
+  betas:
+  - 0.9
+  - 0.95
+  eps: 1.0e-08
+  weight_decay: 0.1
+  grad_clip: 1.0
+  table_lr_mult: 4.0
+  precision: fp16
+  act_ckpt: true
+  attn_backend: sdpa
+  zero1: false
+  ckpt_every: 200
+  keep_last: 3
+  keep_every: 1000
+  eval_every: 200
+  eval_max_batches: null
+  diag_batches: 4
+  log_every: 10
+  scaler_min: 1.0
+  scaler_patience: 100
+  nan_patience: 20
+  out_root: runs
+  save_steps:
+  - 500
+  - 1000
+  - 1907
+  strip_old_optimizer: true
+  seq_len: 2048
+name: w3_sdc_1b
+params:
+  reference: false
+  expected_non_embedding: null
+  match_config: w3_sb_1b.yaml
+  match_tolerance: 0.001
+  match_target: 369777920
+wandb:
+  project: morbius-wave3
+_source: ~/morbius/configs/w3_sdc_1b.yaml

@@ -1,0 +1,19 @@
+# Install torch from the PyTorch index for the machine's CUDA, e.g.
+#   pip install torch==2.11.0 --index-url https://download.pytorch.org/whl/cu126   (cluster; driver >= 560)
+#   pip install torch==2.11.0 --index-url https://download.pytorch.org/whl/cu128   (local Windows box)
+# then: pip install -r requirements.txt
+torch==2.11.0
+numpy==2.4.2
+PyYAML==6.0.3
+Jinja2==3.1.6
+tensorboard==2.21.0
+pytest==9.1.1
+tokenizers==0.22.2          # data sanity script only
+# data download/tokenization (data/download_dataset.py, data/verify_dataset.py) only:
+transformers==5.13.0        # >=5 resolves tokenizer_class "TokenizersBackend" (needed by verify_dataset.py)
+datasets==5.0.0
+huggingface_hub
+tqdm
+python-dotenv==1.2.2
+# optional: wandb (only with --wandb); flash-attn (see slurm/README.md)
+# Wave 3 eval/analysis/figures: see requirements-eval.txt (separate env; lm-eval pins newer datasets/tokenizers)

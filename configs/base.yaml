@@ -1,0 +1,50 @@
+# Shared settings for every wave-1 run. Run configs `extends: base.yaml`.
+# Layer ids are 0-indexed. d_ff is indexed by original layer id;
+# memory_layers by kept-layer position (identical while no layer is deleted).
+model:
+  d_model: 1024
+  n_layers: 24
+  n_heads: 16
+  n_kv_heads: 2
+  head_dim: 64
+  vocab: 32768            # data/tokenizer: byte-level BPE, 32,768 ids, EOS=2
+  seq_len: 2048
+  d_ff: 2816
+  memory_layers: []
+  memory: null
+  norm_eps: 1.0e-5
+  rope_theta: 10000.0
+  init_std: 0.02
+
+train:
+  seed: 1234              # model init + RNG
+  data_seed: 1234         # fixed window order (index file), identical for every run
+  data_dir: data_local/climbmix_small   # override on the cluster with --data_dir
+  val_tokens: 20000000    # first 20M tokens of val.bin
+  global_batch: 256       # sequences per optimizer step (fixed on every machine)
+  micro_batch: 1          # per GPU; grad-accum steps = global_batch / (micro_batch * world_size)
+  tokens_total: 2000000000   # sets the cosine length; never inferred
+  lr: 6.0e-4
+  min_lr_ratio: 0.1
+  warmup_frac: 0.02
+  warmup_min_steps: 100
+  betas: [0.9, 0.95]
+  eps: 1.0e-8
+  weight_decay: 0.1
+  grad_clip: 1.0
+  table_lr_mult: 4.0
+  precision: fp16         # fp16 (AMP + GradScaler) | fp32
+  act_ckpt: true
+  attn_backend: sdpa
+  zero1: false
+  ckpt_every: 200
+  keep_last: 3
+  keep_every: 1000
+  eval_every: 200
+  eval_max_batches: null  # null = the whole val slice
+  diag_batches: 4         # val batches used for memory diagnostics
+  log_every: 10
+  scaler_min: 1.0
+  scaler_patience: 100    # abort if scale < scaler_min for this many consecutive steps
+  nan_patience: 20        # abort after this many consecutive non-finite losses
+  out_root: runs

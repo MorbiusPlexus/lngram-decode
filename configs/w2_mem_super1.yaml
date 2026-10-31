@@ -1,0 +1,9 @@
+# Pivot plan "super-memory": Run 2's recipe (24/4 attention, d_ff cut near) with
+# memory at layer 1 only; layer 11's table budget moved into layer 1 (R 90 -> 184).
+# Not in the Wave 1 repo; reconstructed from the pivot plan's 369,777,920 count.
+extends: w1_mem_cut_near.yaml
+name: w2_mem_super1
+params: {reference: false, expected_non_embedding: 369777920}
+model:
+  memory_layers: [1]
+  memory: {routes: 184}

@@ -1,0 +1,1049 @@
+{
+ "classes": [
+  "word-start",
+  "word-cont",
+  "punct",
+  "digit",
+  "whitespace/newline",
+  "special"
+ ],
+ "SB": {
+  "H_class_bits": 1.4455524511079791,
+  "mi_code_class_bits_mean": 0.4424164366435333,
+  "mi_code_class_frac_mean": 0.3060535342764162,
+  "mi_code_class_frac_max": 0.4256124677483145,
+  "top_class_route": 137,
+  "examples_route": 137,
+  "examples": {
+   "0": {
+    "share": 0.0323924596605885,
+    "top_tokens": [
+     " milk",
+     " will",
+     " but",
+     " means",
+     "ers",
+     " do",
+     " age",
+     "%"
+    ],
+    "class_mix": [
+     19900,
+     4570,
+     441,
+     0,
+     0,
+     0
+    ]
+   },
+   "1": {
+    "share": 0.05703626743576707,
+    "top_tokens": [
+     "-",
+     "y",
+     " y",
+     "ose",
+     " al",
+     " cheese",
+     "o",
+     "airy"
+    ],
+    "class_mix": [
+     23641,
+     12322,
+     7864,
+     36,
+     0,
+     0
+    ]
+   },
+   "2": {
+    "share": 0.09959988921209252,
+    "top_tokens": [
+     " it",
+     " they",
+     " cancer",
+     " people",
+     " It",
+     " life",
+     " he",
+     " there"
+    ],
+    "class_mix": [
+     70287,
+     6308,
+     1,
+     0,
+     0,
+     0
+    ]
+   },
+   "3": {
+    "share": 0.07694948357491252,
+    "top_tokens": [
+     " dream",
+     " l",
+     " cheese",
+     " d",
+     " air",
+     " Air",
+     " F",
+     " C"
+    ],
+    "class_mix": [
+     34478,
+     12875,
+     54,
+     11770,
+     0,
+     0
+    ]
+   },
+   "4": {
+    "share": 0.060943751731061056,
+    "top_tokens": [
+     " is",
+     " are",
+     " was",
+     " can",
+     " and",
+     " were",
+     "ing",
+     " more"
+    ],
+    "class_mix": [
+     41588,
+     5280,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "5": {
+    "share": 0.03754825840629254,
+    "top_tokens": [
+     "'s",
+     " your",
+     " \"",
+     " their",
+     " his",
+     " high",
+     " her",
+     " these"
+    ],
+    "class_mix": [
+     17534,
+     9766,
+     1576,
+     0,
+     0,
+     0
+    ]
+   },
+   "6": {
+    "share": 0.072105763441811,
+    "top_tokens": [
+     " you",
+     " be",
+     " I",
+     " not",
+     " also",
+     " one",
+     " all",
+     " some"
+    ],
+    "class_mix": [
+     50693,
+     4759,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "7": {
+    "share": 0.10129291568546117,
+    "top_tokens": [
+     " the",
+     " a",
+     " The",
+     " an",
+     " this",
+     " your",
+     "The",
+     " A"
+    ],
+    "class_mix": [
+     68359,
+     9151,
+     26,
+     362,
+     0,
+     0
+    ]
+   },
+   "8": {
+    "share": 0.040463592779021035,
+    "top_tokens": [
+     " or",
+     " that",
+     "es",
+     " when",
+     "ed",
+     " if",
+     ";",
+     " If"
+    ],
+    "class_mix": [
+     19370,
+     10795,
+     953,
+     0,
+     0,
+     0
+    ]
+   },
+   "9": {
+    "share": 0.06522833101658308,
+    "top_tokens": [
+     ",",
+     "er",
+     "urt",
+     "at",
+     "mond",
+     "ine",
+     "),",
+     " -"
+    ],
+    "class_mix": [
+     4590,
+     14365,
+     31198,
+     0,
+     10,
+     0
+    ]
+   },
+   "10": {
+    "share": 0.04866865963536215,
+    "top_tokens": [
+     " which",
+     " time",
+     " use",
+     " help",
+     "on",
+     "ation",
+     " study",
+     "ia"
+    ],
+    "class_mix": [
+     27096,
+     10286,
+     7,
+     39,
+     0,
+     0
+    ]
+   },
+   "11": {
+    "share": 0.03523757634548143,
+    "top_tokens": [
+     "a",
+     ")",
+     "el",
+     "ese",
+     "ment",
+     "rapy",
+     "ron",
+     "ant"
+    ],
+    "class_mix": [
+     12431,
+     10813,
+     1114,
+     2684,
+     57,
+     0
+    ]
+   },
+   "12": {
+    "share": 0.13546162278277898,
+    "top_tokens": [
+     " of",
+     " to",
+     " and",
+     " in",
+     " for",
+     " with",
+     " as",
+     " on"
+    ],
+    "class_mix": [
+     99823,
+     4216,
+     136,
+     0,
+     0,
+     0
+    ]
+   },
+   "13": {
+    "share": 0.05212883125259253,
+    "top_tokens": [
+     "\n",
+     " (",
+     ":",
+     "s",
+     "",
+     "in",
+     "\"",
+     " per"
+    ],
+    "class_mix": [
+     1709,
+     5454,
+     6217,
+     0,
+     26209,
+     500
+    ]
+   },
+   "14": {
+    "share": 0.032800762512076795,
+    "top_tokens": [
+     " have",
+     " that",
+     " has",
+     " had",
+     " used",
+     "In",
+     " older",
+     " take"
+    ],
+    "class_mix": [
+     21071,
+     4104,
+     50,
+     0,
+     0,
+     0
+    ]
+   },
+   "15": {
+    "share": 0.05214183452811763,
+    "top_tokens": [
+     ".",
+     "?",
+     ")",
+     ").",
+     "og",
+     "!",
+     ".\"",
+     " ."
+    ],
+    "class_mix": [
+     3636,
+     4826,
+     31633,
+     4,
+     0,
+     0
+    ]
+   }
+  }
+ },
+ "SD-B": {
+  "H_class_bits": 1.4455524511079791,
+  "mi_code_class_bits_mean": 0.3110630869531166,
+  "mi_code_class_frac_mean": 0.21518630245114567,
+  "mi_code_class_frac_max": 0.32737141191175917,
+  "top_class_route": 23,
+  "examples_route": 23,
+  "examples": {
+   "0": {
+    "share": 0.0651321067776973,
+    "top_tokens": [
+     " in",
+     " and",
+     " of",
+     " which",
+     " it",
+     " with",
+     " but",
+     " at"
+    ],
+    "class_mix": [
+     46333,
+     2261,
+     311,
+     1184,
+     0,
+     0
+    ]
+   },
+   "1": {
+    "share": 0.13589723251287,
+    "top_tokens": [
+     " the",
+     " a",
+     " of",
+     " and",
+     " to",
+     " or",
+     " that",
+     " it"
+    ],
+    "class_mix": [
+     100724,
+     2368,
+     497,
+     920,
+     0,
+     1
+    ]
+   },
+   "2": {
+    "share": 0.03597486206775487,
+    "top_tokens": [
+     "-",
+     ".",
+     ")",
+     " at",
+     "1",
+     ").",
+     "2",
+     " of"
+    ],
+    "class_mix": [
+     7959,
+     7986,
+     5921,
+     5758,
+     42,
+     0
+    ]
+   },
+   "3": {
+    "share": 0.1314670165414668,
+    "top_tokens": [
+     ".",
+     "\n",
+     " to",
+     "-",
+     " (",
+     " The",
+     ":",
+     " and"
+    ],
+    "class_mix": [
+     27994,
+     6269,
+     39325,
+     788,
+     26230,
+     497
+    ]
+   },
+   "4": {
+    "share": 0.05202480504839169,
+    "top_tokens": [
+     " milk",
+     " such",
+     " no",
+     " of",
+     " both",
+     " butter",
+     " including",
+     " people"
+    ],
+    "class_mix": [
+     36460,
+     3376,
+     87,
+     86,
+     0,
+     0
+    ]
+   },
+   "5": {
+    "share": 0.07387290858567273,
+    "top_tokens": [
+     " the",
+     " be",
+     " have",
+     " as",
+     " that",
+     " has",
+     " can",
+     " of"
+    ],
+    "class_mix": [
+     54675,
+     1933,
+     172,
+     31,
+     0,
+     0
+    ]
+   },
+   "6": {
+    "share": 0.03543392580591051,
+    "top_tokens": [
+     "urt",
+     "og",
+     "ing",
+     " cancer",
+     " flavor",
+     " cheese",
+     " However",
+     " disease"
+    ],
+    "class_mix": [
+     16239,
+     10529,
+     234,
+     245,
+     3,
+     0
+    ]
+   },
+   "7": {
+    "share": 0.030850271183311077,
+    "top_tokens": [
+     " than",
+     " for",
+     " You",
+     " and",
+     "es",
+     " as",
+     " of",
+     " A"
+    ],
+    "class_mix": [
+     17715,
+     5753,
+     231,
+     26,
+     0,
+     0
+    ]
+   },
+   "8": {
+    "share": 0.04807831092652239,
+    "top_tokens": [
+     " milk",
+     " age",
+     " of",
+     " life",
+     "ing",
+     " people",
+     " with",
+     " through"
+    ],
+    "class_mix": [
+     30948,
+     4937,
+     389,
+     700,
+     0,
+     0
+    ]
+   },
+   "9": {
+    "share": 0.09967400788258562,
+    "top_tokens": [
+     ",",
+     " and",
+     " you",
+     " of",
+     "?",
+     " for",
+     " about",
+     " it"
+    ],
+    "class_mix": [
+     39693,
+     6075,
+     30017,
+     868,
+     0,
+     0
+    ]
+   },
+   "10": {
+    "share": 0.04897423661020211,
+    "top_tokens": [
+     " years",
+     "%",
+     " time",
+     "s",
+     ")",
+     " way",
+     " cheese",
+     "If"
+    ],
+    "class_mix": [
+     17012,
+     16059,
+     1492,
+     3100,
+     0,
+     0
+    ]
+   },
+   "11": {
+    "share": 0.04023733578488421,
+    "top_tokens": [
+     " on",
+     " to",
+     " and",
+     "y",
+     " over",
+     " for",
+     "mond",
+     "am"
+    ],
+    "class_mix": [
+     11591,
+     16720,
+     1676,
+     955,
+     0,
+     2
+    ]
+   },
+   "12": {
+    "share": 0.05615724601026999,
+    "top_tokens": [
+     " dream",
+     " milk",
+     " well",
+     " people",
+     " means",
+     " older",
+     " part",
+     "ung"
+    ],
+    "class_mix": [
+     36462,
+     6502,
+     155,
+     68,
+     0,
+     0
+    ]
+   },
+   "13": {
+    "share": 0.04835398036765461,
+    "top_tokens": [
+     " is",
+     " are",
+     " was",
+     " so",
+     " more",
+     " for",
+     " of",
+     " important"
+    ],
+    "class_mix": [
+     31388,
+     5490,
+     266,
+     42,
+     0,
+     0
+    ]
+   },
+   "14": {
+    "share": 0.06600982787564187,
+    "top_tokens": [
+     "airy",
+     " cancer",
+     "ose",
+     " health",
+     " body",
+     " products",
+     " cheese",
+     "ers"
+    ],
+    "class_mix": [
+     32016,
+     18354,
+     285,
+     109,
+     0,
+     0
+    ]
+   },
+   "15": {
+    "share": 0.031861926019164225,
+    "top_tokens": [
+     "er",
+     "al",
+     "a",
+     "ers",
+     "cium",
+     "is",
+     "ine",
+     "ese"
+    ],
+    "class_mix": [
+     8997,
+     15278,
+     212,
+     15,
+     1,
+     0
+    ]
+   }
+  }
+ },
+ "SD-C": {
+  "H_class_bits": 1.4455524511079791,
+  "mi_code_class_bits_mean": 0.2977008430613237,
+  "mi_code_class_frac_mean": 0.20594260888502772,
+  "mi_code_class_frac_max": 0.3844152299654875,
+  "top_class_route": 8,
+  "examples_route": 8,
+  "examples": {
+   "0": {
+    "share": 0.036959210025005296,
+    "top_tokens": [
+     " which",
+     " when",
+     " if",
+     " and",
+     " how",
+     " for",
+     "urt",
+     " where"
+    ],
+    "class_mix": [
+     18454,
+     9773,
+     180,
+     16,
+     0,
+     0
+    ]
+   },
+   "1": {
+    "share": 0.06208543932216525,
+    "top_tokens": [
+     " who",
+     " and",
+     " for",
+     " has",
+     " It",
+     " have",
+     " then",
+     " see"
+    ],
+    "class_mix": [
+     42419,
+     4903,
+     72,
+     351,
+     1,
+     0
+    ]
+   },
+   "2": {
+    "share": 0.07917824499991548,
+    "top_tokens": [
+     " of",
+     " in",
+     " that",
+     " and",
+     " for",
+     " or",
+     " cheese",
+     " from"
+    ],
+    "class_mix": [
+     47960,
+     11898,
+     1032,
+     0,
+     1,
+     0
+    ]
+   },
+   "3": {
+    "share": 0.1939958675590381,
+    "top_tokens": [
+     " the",
+     " it",
+     " of",
+     " and",
+     " in",
+     " you",
+     " be",
+     " is"
+    ],
+    "class_mix": [
+     144642,
+     3946,
+     597,
+     4,
+     1,
+     0
+    ]
+   },
+   "4": {
+    "share": 0.027335485808875255,
+    "top_tokens": [
+     "ose",
+     " Mil",
+     "rapy",
+     " to",
+     "ive",
+     "are",
+     "ors",
+     "es"
+    ],
+    "class_mix": [
+     10088,
+     9911,
+     719,
+     304,
+     0,
+     0
+    ]
+   },
+   "5": {
+    "share": 0.04628906021426797,
+    "top_tokens": [
+     " to",
+     " time",
+     " will",
+     " years",
+     " means",
+     " people",
+     " factors",
+     " help"
+    ],
+    "class_mix": [
+     30200,
+     1793,
+     447,
+     3158,
+     0,
+     0
+    ]
+   },
+   "6": {
+    "share": 0.036484590468338976,
+    "top_tokens": [
+     " milk",
+     " to",
+     ",",
+     " cheese",
+     " way",
+     " products",
+     " process",
+     " than"
+    ],
+    "class_mix": [
+     19746,
+     6169,
+     2138,
+     5,
+     0,
+     0
+    ]
+   },
+   "7": {
+    "share": 0.0636419314025203,
+    "top_tokens": [
+     " to",
+     " can",
+     " cancer",
+     ":",
+     " such",
+     " one",
+     " need",
+     " could"
+    ],
+    "class_mix": [
+     46097,
+     1019,
+     1785,
+     41,
+     1,
+     0
+    ]
+   },
+   "8": {
+    "share": 0.024529378950557644,
+    "top_tokens": [
+     " and",
+     "d",
+     "s",
+     " for",
+     "ly",
+     "ron",
+     "in",
+     " as"
+    ],
+    "class_mix": [
+     5016,
+     13605,
+     211,
+     31,
+     1,
+     0
+    ]
+   },
+   "9": {
+    "share": 0.03881217678733273,
+    "top_tokens": [
+     " The",
+     " and",
+     "The",
+     " have",
+     " A",
+     " Air",
+     "In",
+     " two"
+    ],
+    "class_mix": [
+     20088,
+     8984,
+     122,
+     638,
+     2,
+     14
+    ]
+   },
+   "10": {
+    "share": 0.05804142063385767,
+    "top_tokens": [
+     ",",
+     " of",
+     " that",
+     " and",
+     " in",
+     " as",
+     " or",
+     "'s"
+    ],
+    "class_mix": [
+     21078,
+     18057,
+     5499,
+     0,
+     0,
+     2
+    ]
+   },
+   "11": {
+    "share": 0.14029884127811795,
+    "top_tokens": [
+     "\n",
+     " the",
+     " a",
+     " is",
+     " of",
+     " are",
+     " in",
+     " and"
+    ],
+    "class_mix": [
+     79159,
+     7027,
+     689,
+     21,
+     20731,
+     268
+    ]
+   },
+   "12": {
+    "share": 0.026079369393150136,
+    "top_tokens": [
+     ")",
+     "s",
+     "k",
+     " and",
+     "t",
+     "o",
+     "ese",
+     "e"
+    ],
+    "class_mix": [
+     2761,
+     13938,
+     3160,
+     197,
+     0,
+     0
+    ]
+   },
+   "13": {
+    "share": 0.042313958886243445,
+    "top_tokens": [
+     " was",
+     ").",
+     "1",
+     "2",
+     " F",
+     " and",
+     ")",
+     " 2"
+    ],
+    "class_mix": [
+     14166,
+     6317,
+     2201,
+     9801,
+     3,
+     53
+    ]
+   },
+   "14": {
+    "share": 0.04810171682246758,
+    "top_tokens": [
+     ",",
+     " (",
+     ";",
+     "a",
+     "\"",
+     "g",
+     "p",
+     "airy"
+    ],
+    "class_mix": [
+     2853,
+     10850,
+     23280,
+     8,
+     0,
+     1
+    ]
+   },
+   "15": {
+    "share": 0.07585330744814618,
+    "top_tokens": [
+     ".",
+     "-",
+     "\n",
+     " (",
+     ":",
+     "?",
+     " \"",
+     " was"
+    ],
+    "class_mix": [
+     11479,
+     1700,
+     39138,
+     320,
+     5535,
+     162
+    ]
+   }
+  }
+ },
+ "note": "next-token-information estimates removed: count-based estimator unreliable at 768K fit tokens (see docs)"
+}

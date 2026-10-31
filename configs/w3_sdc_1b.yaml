@@ -1,0 +1,11 @@
+﻿# SD-C: SD-B + diagonal SSM feeding the router and the draft query.
+extends: w3_sdb_1b.yaml
+name: w3_sdc_1b
+model:
+  memory:
+    router_input: embed2_ssm  # concat(RMSNorm(e[t-1]), RMSNorm(e[t]), s[t])
+  ssm:
+    enabled: true
+    state_dim: 256
+    chunk: 128
+    feeds: [router, draft_query]
