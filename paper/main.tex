@@ -27,6 +27,17 @@
 \newcommand{\Lngram}{\textsc{Lngram}}
 \newcommand{\ci}[2]{\,{\scriptstyle[#1,\,#2]}}  % use inside math mode
 
+% Release links: shown in the final/preprint versions, withheld in [review] mode (anonymity).
+\makeatletter
+\newif\ifshowlinks
+\ifacl@anonymize\showlinksfalse\else\showlinkstrue\fi
+\makeatother
+\newcommand{\releasenote}{\ifshowlinks\footnote{Weights:
+  \url{https://huggingface.co/afoolishman/self-drafting-latent-memory}. Training logs:
+  \url{https://forge.coreweave.com/wandb/kishor-iiit-hyderabad/morbius-wave3}.}\fi}
+\newcommand{\wbrun}[1]{\href{https://forge.coreweave.com/wandb/kishor-iiit-hyderabad/morbius-wave3/runs/#1}{\texttt{\detokenize{#1}}}}
+\newcommand{\hfdir}[1]{\href{https://huggingface.co/afoolishman/self-drafting-latent-memory/tree/main/#1}{\texttt{#1/}}}
+
 \title{Self-Drafting Latent Memory: What an $n$-gram Memory Learns,\\and When It Can Draft for Its Own Model}
 
 \author{Anonymous ACL submission}
@@ -54,8 +65,8 @@ Interpretability analyses explain when self-drafting helps. Prompt lookup's lead
 40--65\% more than prompt lookup. A hybrid of the two beats prompt lookup on every model and text type, and the drafter's
 own confidence identifies where it is reliable (88\% agreement at a 0.5 threshold). The memory's codes form emergent
 word-class partitions that are not unique across training runs, and the memory specialises in frequent, local and
-formatting tokens. Serving the table from host memory is bit-exact at ${\sim}1\%$ latency cost. We release all code, logs
-and results.
+formatting tokens. Serving the table from host memory is bit-exact at ${\sim}1\%$ latency cost. We release all code,
+model weights, training logs and results.\releasenote
 \end{abstract}
 
 %=====================================================================
@@ -873,4 +884,33 @@ serving and interpretability code, all training logs (every logged step and eval
 tables and figures. \texttt{paper/make\_figures.py} regenerates all figures from those files. 231 CPU unit tests cover
 the claims the implementation relies on: bitwise backbone isolation of the draft path, stop-gradient destinations, scan
 exactness, cached-decoding equivalence, serving-layout equivalence, and resume determinism.
+
+\ifshowlinks
+All checkpoints are on the Hugging Face Hub
+(\url{https://huggingface.co/afoolishman/self-drafting-latent-memory}), and the full training curves are in a
+Weights \& Biases project (\url{https://forge.coreweave.com/wandb/kishor-iiit-hyderabad/morbius-wave3}).
+Table~\ref{tab:release} maps each model to its weights and training run.
+
+\begin{table}[h]
+\centering
+\footnotesize
+\begin{tabular}{@{}lll@{}}
+\toprule
+Model & Weights & W\&B run \\
+\midrule
+\SB{} run 1 & \hfdir{sb-run1} & \wbrun{w3_sb_1b-415a3242} \\
+\SB{} run 2 & \hfdir{sb-run2} & \wbrun{w3_sb_1b-7f059808} \\
+\SDB{} & \hfdir{sd-b} & \wbrun{w3_sdb_1b-fb508de3} \\
+\SDC{} & \hfdir{sd-c} & \wbrun{w3_sdc_1b-b2100336} \\
+\Dense{} & \hfdir{d270} & \wbrun{w3_dense270-448b0ee5} \\
+Post-hoc & \hfdir{posthoc-drafters} & \wbrun{ph_sb-73624b3a} \\
+Post-hoc + SSM & \hfdir{posthoc-drafters} & \wbrun{ph_sb_ssm-4e4d104e} \\
+\bottomrule
+\end{tabular}
+\caption{Released weights and training runs.}
+\label{tab:release}
+\end{table}
+\else
+Links to the released weights and training logs are withheld for anonymous review.
+\fi
 \end{document}

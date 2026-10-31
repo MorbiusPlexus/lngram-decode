@@ -33,6 +33,22 @@ All models are 24-layer, d=1024 Llama-style decoders trained on the same 1B Clim
 | SD-C | `w3_sdc_1b` | SD-B + a 256-channel diagonal SSM feeding the router and the draft query (181 routes). |
 | D270 | `w3_dense270` | Dense control with no memory and the same active parameters per token; 2B tokens. |
 
+## Weights and training logs
+
+Checkpoints are on the Hugging Face Hub at [afoolishman/self-drafting-latent-memory](https://huggingface.co/afoolishman/self-drafting-latent-memory), with a model card per folder. Live training curves are in the W&B project [morbius-wave3](https://forge.coreweave.com/wandb/kishor-iiit-hyderabad/morbius-wave3). The same logs are also in `results/training/<run>/train.jsonl`.
+
+| Model | Weights | W&B run | Final val loss |
+|---|---|---|---|
+| SB run 1 | [`sb-run1/`](https://huggingface.co/afoolishman/self-drafting-latent-memory/tree/main/sb-run1) | [w3_sb_1b-415a3242](https://forge.coreweave.com/wandb/kishor-iiit-hyderabad/morbius-wave3/runs/w3_sb_1b-415a3242) | 2.7127 |
+| SB run 2 | [`sb-run2/`](https://huggingface.co/afoolishman/self-drafting-latent-memory/tree/main/sb-run2) | [w3_sb_1b-7f059808](https://forge.coreweave.com/wandb/kishor-iiit-hyderabad/morbius-wave3/runs/w3_sb_1b-7f059808) | 2.7107 |
+| SD-B | [`sd-b/`](https://huggingface.co/afoolishman/self-drafting-latent-memory/tree/main/sd-b) | [w3_sdb_1b-fb508de3](https://forge.coreweave.com/wandb/kishor-iiit-hyderabad/morbius-wave3/runs/w3_sdb_1b-fb508de3) | 2.7159 |
+| SD-C | [`sd-c/`](https://huggingface.co/afoolishman/self-drafting-latent-memory/tree/main/sd-c) | [w3_sdc_1b-b2100336](https://forge.coreweave.com/wandb/kishor-iiit-hyderabad/morbius-wave3/runs/w3_sdc_1b-b2100336) | 2.7111 |
+| D270 (2B tokens) | [`d270/`](https://huggingface.co/afoolishman/self-drafting-latent-memory/tree/main/d270) | [w3_dense270-448b0ee5](https://forge.coreweave.com/wandb/kishor-iiit-hyderabad/morbius-wave3/runs/w3_dense270-448b0ee5) | 2.5147 |
+| Post-hoc drafter | [`posthoc-drafters/posthoc_sb.pt`](https://huggingface.co/afoolishman/self-drafting-latent-memory/tree/main/posthoc-drafters) | [ph_sb-73624b3a](https://forge.coreweave.com/wandb/kishor-iiit-hyderabad/morbius-wave3/runs/ph_sb-73624b3a) | — |
+| Post-hoc drafter + SSM | [`posthoc-drafters/posthoc_sb_ssm.pt`](https://huggingface.co/afoolishman/self-drafting-latent-memory/tree/main/posthoc-drafters) | [ph_sb_ssm-4e4d104e](https://forge.coreweave.com/wandb/kishor-iiit-hyderabad/morbius-wave3/runs/ph_sb_ssm-4e4d104e) | — |
+
+The W&B project also holds smoke tests and two incomplete runs that aren't used in the paper.
+
 ## Repository layout
 
 | Path | Contents |
@@ -50,7 +66,7 @@ All models are 24-layer, d=1024 Llama-style decoders trained on the same 1B Clim
 | `paper/` | LaTeX source, bibliography, figures, and `make_figures.py`, which regenerates every figure from `results/`. |
 | `docs/` | `RESULTS.md` (all numbers), `WAVE3.md` (implementation notes), `VERIFIED.md` (facts about Lngram v2's layout). |
 
-Checkpoints aren't included (1.2–4.8 GB each). Release them separately, e.g. on the Hugging Face Hub.
+Checkpoints aren't in this repository (1.2–4.8 GB each). They are on the [Hugging Face Hub](https://huggingface.co/afoolishman/self-drafting-latent-memory).
 
 ## Reproduce
 
